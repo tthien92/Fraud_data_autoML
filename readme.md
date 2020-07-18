@@ -24,4 +24,15 @@ This particular investigation will demonstrate how to automatically build models
 5. Create Random Forest and SVM models for comparison
 6. Predict and score based on accuracy, recall, and F1
 
+## Results
 
+### SMOTE Classification Results
+
+![smote](images/os_class.JPG)
+
+### Balanced Class Parameter Results
+
+![balanced](images/balanced_class.JPG)
+
+With the exception of decision tree, using the *balanced* class parameter for each algorithm allowed it to perform a little bit better than with SMOTE. Therefore,
+we'll compare the best model from AutoML against each of the algorithms built. H2O's AutoML also has a parameter for this, so that will be utilized instead of the SMOTE data. 
