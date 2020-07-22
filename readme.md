@@ -7,7 +7,7 @@ This particular investigation will demonstrate how to automatically build models
 
 ## Table of Contents
 
-**Fraud Detection with AutoML** - upyter notebook OSEMN walkthrough of cleaning the data and feeding it to AutoML systems. 
+**Fraud Detection with AutoML** - Jupyter notebook OSEMN walkthrough of cleaning the data and feeding it to AutoML systems. 
 
 **sample_1.csv** - data of credit card activity containing 30000 entries, which is a subset of the original*
 
@@ -36,3 +36,17 @@ This particular investigation will demonstrate how to automatically build models
 
 With the exception of decision tree, using the *balanced* class parameter for each algorithm allowed it to perform a little bit better than with SMOTE. Therefore,
 we'll compare the best model from AutoML against each of the algorithms built. H2O's AutoML also has a parameter for this, so that will be utilized instead of the SMOTE data. 
+
+### AutoML Results
+
+H2O's AutoML package is pretty versatile in what is customizable. For the stopping metric, AUCPR was selected due to the class imbalanced, and only 10 models were run to save time. The results can be seen below compared to the other algorithms.
+
+![automl](images/automl_results.JPG)
+
+AutoML did not perform as well as expected. While accuracy was very high, the recall was unacceptable, especially since false negatives can lead to huge financial losses in fraud detection. This is because the model overfitted to the training data, even with balanced weights:
+
+![overfit](images/best_train.JPG)
+
+## Conclusion
+
+AutoML is extremely convenient in being able to create multiple models for both regression and classification problems. However, it is unlikely to replace data scientists (yet) as it is computationally expensive and requires a lot of hyperparameter tuning from the user. This could be somewhat mitigated through hyperparameter optimization, but that would still require more time and resources, especially for operations of scale. 
