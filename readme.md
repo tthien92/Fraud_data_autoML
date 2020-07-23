@@ -3,7 +3,7 @@
 
 Fraud detection is a common issue for any company that issues credit or loans. Detecting these instances of fraud has the potential to save the company millions in addition to improving its image and reliability among stakeholders and customers. Therefore, it is often an exemplar case study for students new to data science, allowing them to test multiple classifier algorithms for statistical scores like accuracy, recall, or F1. 
 
-This particular investigation will demonstrate how to automatically build models with AutoML using H2O's AutoML package. While time intensive, this can be an extremely efficient way of generating effective models.
+This particular investigation will demonstrate how to automatically build models with AutoML using H2O's AutoML package ([found here](https://docs.h2o.ai/h2o/latest-stable/h2o-docs/downloading.html)). While time intensive, this can be an extremely efficient way of generating effective models.
 
 ## Table of Contents
 
